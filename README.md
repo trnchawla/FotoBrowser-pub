@@ -9,9 +9,31 @@ telemetry.
 
 ## Download
 
-➡️ **[Download the latest release](https://github.com/trnchawla/FotoBrowser-pub/releases/latest)** (`.dmg`)
+➡️ **[Download the latest release](https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg)** (`.dmg`)
 
 Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
+
+## Screenshots
+
+**Timeline grid** — month/year sections, watched folders & drive roles in the sidebar.
+
+![Timeline grid](assets/screenshot-timeline.png)
+
+**Import from iPhone** — browse the device over USB and import only what's new.
+
+![Import from iPhone](assets/screenshot-import.png)
+
+**Duplicate detection** — find duplicates across folders and resolve them safely in bulk.
+
+![Resolve duplicates](assets/screenshot-duplicates.png)
+
+**Native printing** — print at real photo sizes, with crop…
+
+![Print a single photo](assets/screenshot-print-single.png)
+
+…or tile multiple copies per sheet.
+
+![Print photo sizes / tiling](assets/screenshot-print-sizes.png)
 
 ## Requirements
 
