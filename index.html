@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+  FotoBrowser landing page (static, GitHub Pages friendly).
+
+  BEFORE PUBLISHING, replace the placeholder slug "trnchawla/FotoBrowser-pub"
+  everywhere below with your actual GitHub <user>/<repo>, and drop your
+  1024px logo at  assets/icon.png  and a screenshot at  assets/screenshot.png.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FotoBrowser — your photos, your folders, your Mac</title>
+<meta name="description" content="A fast, local-first photo browser for Mac. The Apple Photos feel, over your own folders and backup drives — no library lock-in, no cloud." />
+<meta property="og:title" content="FotoBrowser — your photos, your folders, your Mac" />
+<meta property="og:description" content="The Apple Photos feel, over your own folders and backup drives. No library lock-in, no cloud. Free alpha for macOS 14+." />
+<style>
+  :root {
+    --bg: #0e0b12; --panel: #17131d; --text: #f3eef7; --muted: #b6acc2;
+    --accent1: #ff8a3d; --accent2: #ff3d8a; --ring: rgba(255,120,150,.35);
+    --card: #1d1824;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#fff7f3; --panel:#fff; --text:#23121c; --muted:#6b5e68; --card:#fff; --ring:rgba(255,90,140,.18); }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", Segoe UI, Roboto, sans-serif; }
+  a { color: inherit; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 22px; }
+  .hero { text-align:center; padding: 76px 0 40px; }
+  .icon { width:128px; height:128px; border-radius:28px;
+    box-shadow: 0 18px 60px var(--ring); }
+  h1 { font-size: 44px; line-height:1.1; margin: 22px 0 8px; letter-spacing:-.02em; }
+  .grad { background:linear-gradient(100deg,var(--accent1),var(--accent2));
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .tag { font-size: 19px; color: var(--muted); margin: 0 auto 26px; max-width:640px; }
+  .cta { display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+    background:linear-gradient(100deg,var(--accent1),var(--accent2)); color:#fff;
+    font-weight:700; padding:14px 26px; border-radius:14px; box-shadow:0 10px 30px var(--ring); }
+  .sub { display:block; margin-top:12px; color:var(--muted); font-size:14px; }
+  .shot { width:100%; border-radius:16px; margin:36px 0; border:1px solid rgba(128,128,128,.18); }
+  section { padding: 26px 0; }
+  h2 { font-size: 26px; margin: 0 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid rgba(128,128,128,.14);
+    border-radius:14px; padding:18px; }
+  .card h3 { margin:0 0 6px; font-size:17px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  .why { background:var(--panel); border-radius:18px; padding:26px; }
+  .why p { color:var(--muted); }
+  ol.steps { color:var(--muted); }
+  code { background:rgba(128,128,128,.16); padding:2px 6px; border-radius:6px;
+    font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .meta { color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); padding:50px 0 70px; font-size:14px; }
+  .pill { display:inline-block; font-size:12px; font-weight:700; letter-spacing:.04em;
+    color:var(--accent2); border:1px solid var(--ring); border-radius:999px; padding:4px 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <img class="icon" src="assets/icon.png" alt="FotoBrowser icon" />
+    <h1>Your photos, your folders,<br/><span class="grad">your Mac.</span></h1>
+    <p class="tag">A fast, local-first photo browser for macOS. The Apple&nbsp;Photos feel — over your own folders and backup drives. No library lock-in, no cloud.</p>
+    <a class="cta" href="https://github.com/trnchawla/FotoBrowser-pub/releases/latest">⬇︎ Download for Mac</a>
+    <span class="sub">Free · <span class="pill">ALPHA</span> · macOS 14+ · Apple&nbsp;Silicon &amp; Intel</span>
+  </div>
+
+  <!-- Optional screenshot: drop assets/screenshot.png -->
+  <img class="shot" src="assets/screenshot.png" alt="FotoBrowser screenshot" onerror="this.style.display='none'" />
+
+  <section class="why">
+    <h2>Why FotoBrowser?</h2>
+    <p>Apple Photos keeps everything inside a single <code>.photoslibrary</code> bundle. Move it the wrong way or point it at an external drive and it can break — and then your realistic option is to <strong>buy more expensive Apple storage</strong> to keep things "safe." Your photos are effectively held hostage by the app.</p>
+    <p>FotoBrowser does the opposite. Your photos stay as <strong>ordinary files in ordinary folders</strong> on whatever drives you like. You get an Apple-Photos-style timeline, built around how people actually back up — working disks, master drives, and read-only <strong>vaults</strong>.</p>
+  </section>
+
+  <section>
+    <h2>What you get</h2>
+    <div class="grid">
+      <div class="card"><h3>🖼 Fast timeline</h3><p>Month/year sections, lazy thumbnails, smooth on tens of thousands of photos.</p></div>
+      <div class="card"><h3>🗂 Your folders</h3><p>Watch any folders on any drives. Files are never moved without you.</p></div>
+      <div class="card"><h3>💾 Drive roles</h3><p>Internal, Master, and read-only <strong>Vault</strong> drives that are never modified.</p></div>
+      <div class="card"><h3>🔌 Offline-aware</h3><p>Disconnected drives show placeholders; full-res from a connected copy when available.</p></div>
+      <div class="card"><h3>📱 Import from iPhone</h3><p>Copy-only over USB, with a smart “new since last import” date.</p></div>
+      <div class="card"><h3>🧬 Duplicates</h3><p>Detected by content across all folders, with safe bulk resolve and Reclaim Space.</p></div>
+      <div class="card"><h3>❤️ Albums, Likes, Crop</h3><p>Plus native printing — photo sizes, tiling, date stamp.</p></div>
+      <div class="card"><h3>🔒 100% local</h3><p>No cloud, no account, no telemetry. Your photos never leave your Mac.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <ol class="steps">
+      <li>Download the <code>.dmg</code>, open it, and drag <strong>FotoBrowser</strong> to <strong>Applications</strong>.</li>
+      <li>The alpha isn't notarized yet, so on first launch <strong>right-click the app ▸ Open ▸ Open</strong> (only needed once), or run <code>xattr -dr com.apple.quarantine /Applications/FotoBrowser.app</code>.</li>
+      <li>Add a folder of photos (the <strong>＋</strong> in the sidebar) and you're off.</li>
+    </ol>
+    <p class="meta">Requires macOS 14 (Sonoma) or later. Universal build (Apple Silicon &amp; Intel).</p>
+  </section>
+
+  <section>
+    <h2>Feedback</h2>
+    <p class="meta">This is an early alpha and your reports steer it. Please <a href="https://github.com/trnchawla/FotoBrowser-pub/issues">open an issue</a> with what you tried, what you expected, and what happened.</p>
+  </section>
+
+</div>
+<footer>FotoBrowser · a local-first Mac photo browser · made by Tarun Chawla</footer>
+</body>
+</html>
