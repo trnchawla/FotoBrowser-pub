@@ -1,34 +1,51 @@
-# FotoBrowser — website + downloads
+# FotoBrowser
 
-This folder is the **public** face of FotoBrowser (landing page + releases). The
-app's **source stays in a separate private repo**.
+**The Apple Photos feel, over your own folders and backup drives — no library lock-in, no cloud.**
 
-## One-time setup
+FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folders and
+drives and get a clean timeline grid over your pictures, without copying them into a
+fragile, proprietary library. Everything runs on your Mac — no account, no cloud, no
+telemetry.
 
-1. Create a new **public** GitHub repo, e.g. `fotobrowser`.
-2. Copy the contents of this `site/` folder into it (`index.html`, `assets/`).
-3. In the repo: **Settings ▸ Pages ▸ Source = Deploy from branch** (`main`, root).
-   Your site goes live at `https://<user>.github.io/fotobrowser/`.
-4. **Find-and-replace** the placeholder slug `trnchawla/FotoBrowser-pub` in
-   `index.html` with your real `<user>/<repo>` (3 spots: the Download button and
-   two "open an issue" links).
-5. Update the in-app links to match: set `kWebsiteURL` and `kFeedbackURL` in
-   `FotoBrowser/FotoBrowserApp.swift` (in the private source repo) to your Pages
-   URL and your issues URL.
+## Download
 
-## Publishing a release (the DMG)
+➡️ **[Download the latest release](https://github.com/trnchawla/FotoBrowser-pub/releases/latest)** (`.dmg`)
 
-1. Build the DMG in the source repo: `scripts/build-dmg.sh` →
-   `build/FotoBrowser-<version>.dmg`.
-2. In **this public repo**, create a **Release** (tag e.g. `v0.1.0-alpha`),
-   paste the notes from the source repo's `RELEASE_NOTES.md`, and **attach the
-   `.dmg`** as a release asset.
-3. The landing page's **Download** button points at `releases/latest`, so it
-   always grabs the newest one.
+Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 
-## Optional
+## Requirements
 
-- Drop a `assets/screenshot.png` (a grid screenshot) — the page shows it
-  automatically, and hides the slot if it's missing.
-- Enable **Issues** on this public repo so testers' feedback lands here (not in
-  your private source repo).
+- macOS **14 (Sonoma)** or later
+- **Universal** — Apple Silicon & Intel
+
+## Install
+
+1. Download the `.dmg`, open it, and drag **FotoBrowser** to **Applications**.
+2. This alpha isn't notarized yet, so on first launch **right-click the app ▸ Open ▸ Open**
+   (only needed once). Alternatively, run:
+   ```
+   xattr -dr com.apple.quarantine /Applications/FotoBrowser.app
+   ```
+
+## Highlights
+
+- 🖼 **Fast timeline grid** with month/year sections and lazy thumbnails — handles large libraries.
+- 🗂 **Watched folders & drives** — your files are never moved without you.
+- 💾 **Drive roles** — Internal / Master / **Vault** (read-only, never modified).
+- 🔌 **Offline-drive aware** — placeholders for disconnected drives, full-res from a connected copy.
+- 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
+- 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
+- ❤️ Albums & Likes · ✂️ Crop · 🖨 Native printing (photo sizes, tiling, date stamp).
+- 🔒 **100% local** — no cloud, no account, no telemetry.
+
+## Status
+
+This is an early **alpha** — usable day-to-day, but rough edges are expected. See the
+[latest release notes](https://github.com/trnchawla/FotoBrowser-pub/releases/latest) for
+what's new and current limitations.
+
+## Feedback
+
+Found a bug or have a suggestion? Please
+[open an issue](https://github.com/trnchawla/FotoBrowser-pub/issues) with what you tried,
+what you expected, and what happened. Thank you for testing! 🙏
