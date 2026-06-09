@@ -4,8 +4,9 @@
 
 FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folders and
 drives and get a clean timeline grid over your pictures, without copying them into a
-fragile, proprietary library. Everything runs on your Mac — no account, no cloud, no
-telemetry.
+fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
+
+> ⚠️ **Alpha** (`0.3.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -43,11 +44,16 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 ## Install
 
 1. Download the `.dmg`, open it, and drag **FotoBrowser** to **Applications**.
-2. This alpha isn't notarized yet, so on first launch **right-click the app ▸ Open ▸ Open**
-   (only needed once). Alternatively, run:
-   ```
-   xattr -dr com.apple.quarantine /Applications/FotoBrowser.app
-   ```
+2. Because the alpha isn't notarized yet, macOS will block the first launch. Follow the steps for your macOS version:
+
+   **macOS 15 Sequoia or later**
+   - Double-click the app — it will be blocked with a "not from an identified developer" message.
+   - Open **System Settings → Privacy & Security**, scroll down, and click **Open Anyway** next to the FotoBrowser entry.
+   - Click **Open** in the confirmation dialog and authenticate with Touch ID or your password.
+
+   **macOS 14 Sonoma or earlier**
+   - **Right-click** the app ▸ **Open** ▸ **Open** (only needed the first time).
+   - Or run: `xattr -dr com.apple.quarantine /Applications/FotoBrowser.app`
 
 ## Highlights
 
@@ -57,8 +63,20 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 🔌 **Offline-drive aware** — placeholders for disconnected drives, full-res from a connected copy.
 - 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
 - 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
+- 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V.
 - ❤️ Albums & Likes · ✂️ Crop · 🖨 Native printing (photo sizes, tiling, date stamp).
-- 🔒 **100% local** — no cloud, no account, no telemetry.
+- 🔒 **Privacy-first** — your photos never leave your Mac. Anonymous crash reports and aggregate feature analytics help improve the app; no photos, file names, or personal data are transmitted.
+
+## Privacy
+
+FotoBrowser is local-first — your photos stay as ordinary files on your drives and are never uploaded anywhere.
+
+**What is collected:**
+- **Crash reports** (Firebase Crashlytics) — anonymous reports if the app crashes, so bugs can be fixed.
+- **Anonymous usage analytics** (Firebase Analytics) — aggregate signals like which features are used and error rates. No photos, file names, folder paths, or personally identifiable data.
+- **Email (optional)** — share your email to receive update notifications. Opt-in only; change or remove it at any time via **Help ▸ Share Email for Updates…**.
+
+**What is never collected:** photo files, thumbnails, file names, folder paths, or any content from your library.
 
 ## Status
 
@@ -70,4 +88,4 @@ what's new and current limitations.
 
 Found a bug or have a suggestion? Please
 [open an issue](https://github.com/trnchawla/FotoBrowser-pub/issues) with what you tried,
-what you expected, and what happened. Thank you for testing! 🙏
+what you expected, and what happened. Thank you for testing!

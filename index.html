@@ -87,16 +87,22 @@
       <div class="card"><h3>🔌 Offline-aware</h3><p>Disconnected drives show placeholders; full-res from a connected copy when available.</p></div>
       <div class="card"><h3>📱 Import from iPhone</h3><p>Copy-only over USB, with a smart “new since last import” date.</p></div>
       <div class="card"><h3>🧬 Duplicates</h3><p>Detected by content across all folders, with safe bulk resolve and Reclaim Space.</p></div>
+      <div class="card"><h3>📹 Video</h3><p>MOV, MP4, and M4V indexed alongside your photos with inline playback.</p></div>
       <div class="card"><h3>❤️ Albums, Likes, Crop</h3><p>Plus native printing — photo sizes, tiling, date stamp.</p></div>
-      <div class="card"><h3>🔒 100% local</h3><p>No cloud, no account, no telemetry. Your photos never leave your Mac.</p></div>
+      <div class="card"><h3>🔒 Privacy-first</h3><p>Your photos never leave your Mac. Anonymous crash reports and aggregate analytics help improve the app; no file names or personal data are transmitted.</p></div>
     </div>
   </section>
 
   <section>
     <h2>Install</h2>
     <ol class="steps">
-      <li>Download the <code>.dmg</code>, open it, and drag <strong>FotoBrowser</strong> to <strong>Applications</strong>.</li>
-      <li>The alpha isn't notarized yet, so on first launch <strong>right-click the app ▸ Open ▸ Open</strong> (only needed once), or run <code>xattr -dr com.apple.quarantine /Applications/FotoBrowser.app</code>.</li>
+      <li><a href="https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg">Download FotoBrowser.dmg</a>, open it, and drag <strong>FotoBrowser</strong> to <strong>Applications</strong>.</li>
+      <li>The alpha isn't notarized yet, so macOS will block the first launch:
+        <ul>
+          <li><strong>macOS 15 Sequoia or later:</strong> open <strong>System Settings → Privacy &amp; Security</strong>, scroll down, and click <strong>Open Anyway</strong> next to FotoBrowser, then authenticate.</li>
+          <li><strong>macOS 14 Sonoma or earlier:</strong> right-click the app ▸ <strong>Open</strong> ▸ <strong>Open</strong> (once only), or run <code>xattr -dr com.apple.quarantine /Applications/FotoBrowser.app</code>.</li>
+        </ul>
+      </li>
       <li>Add a folder of photos (the <strong>＋</strong> in the sidebar) and you're off.</li>
     </ol>
     <p class="meta">Requires macOS 14 (Sonoma) or later. Universal build (Apple Silicon &amp; Intel).</p>
