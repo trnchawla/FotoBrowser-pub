@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.3.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.4.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -38,22 +38,17 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 
 ## Requirements
 
-- macOS **14 (Sonoma)** or later
+- macOS **15 (Sequoia)** or later
 - **Universal** — Apple Silicon & Intel
 
 ## Install
 
 1. Download the `.dmg`, open it, and drag **FotoBrowser** to **Applications**.
-2. Because the alpha isn't notarized yet, macOS will block the first launch. Follow the steps for your macOS version:
-
-   **macOS 15 Sequoia or later**
+2. Because the alpha isn't notarized yet, macOS blocks the first launch:
    - Double-click the app — it will be blocked with a "not from an identified developer" message.
    - Open **System Settings → Privacy & Security**, scroll down, and click **Open Anyway** next to the FotoBrowser entry.
    - Click **Open** in the confirmation dialog and authenticate with Touch ID or your password.
-
-   **macOS 14 Sonoma or earlier**
-   - **Right-click** the app ▸ **Open** ▸ **Open** (only needed the first time).
-   - Or run: `xattr -dr com.apple.quarantine /Applications/FotoBrowser.app`
+   - (Alternatively, run `xattr -dr com.apple.quarantine /Applications/FotoBrowser.app` once.)
 
 ## Highlights
 
@@ -63,6 +58,8 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 🔌 **Offline-drive aware** — placeholders for disconnected drives, full-res from a connected copy.
 - 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
 - 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
+- 🔎 **Find Similar Photos** — perceptual near-duplicate detection (on-device Vision) with quality scoring and a fast keep/trash review.
+- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed).
 - 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V.
 - ❤️ Albums & Likes · ✂️ Crop · 🖨 Native printing (photo sizes, tiling, date stamp).
 - 🔒 **Privacy-first** — your photos never leave your Mac. Anonymous crash reports and aggregate feature analytics help improve the app; no photos, file names, or personal data are transmitted.
