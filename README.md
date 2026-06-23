@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.5.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.6.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -59,10 +59,13 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
 - 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
 - 🔎 **Find Similar Photos** — perceptual near-duplicate detection (on-device Vision) with quality scoring and a fast keep/trash review.
-- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed).
+- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original.
+- 🧑‍🤝‍🧑 **People** — auto-clusters faces on-device, name a cluster to filter the grid by person, and merge/dismiss/remove tools to correct clustering mistakes.
+- 🪄 **Clean Up** — a focused day/trip review flow: Keep/Delete one day (or trip) at a time, with Like and Add-to-Album built in.
 - 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V.
 - ❤️ Albums & Likes · 🖨 Native printing (photo sizes, tiling, date stamp).
-- ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation; **Revert to Original** undoes everything at once.
+- ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation live in a slide-in panel; **Revert to Original** undoes everything at once.
+- 🎬 **Live Photos** — shown as photos with native playback, plus a grid sort toggle and jump-to-month menu.
 - 📦 **Portable library** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file.
 - 🧹 **Clean folder removal** — optionally purge a removed folder's now-orphaned thumbnails and database rows; shared content and your original files are never touched.
 - 🔒 **Privacy-first** — your photos never leave your Mac. Anonymous crash reports and aggregate feature analytics help improve the app; no photos, file names, or personal data are transmitted.
