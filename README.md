@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.7.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.7.1-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -66,7 +66,8 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - ❤️ Albums & Likes · 🖨 **Native printing** — photo sizes and tiling, plus new **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
 - ⚡ **Fast startup & live activity** — the grid paints almost immediately at launch while indexing/analysis refine in the background, and a Background Activity panel shows what's being scanned and indexed (drive › folder · file, with live counts).
 - ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation live in a slide-in panel; **Revert to Original** undoes everything at once.
-- 🎬 **Live Photos** — shown as photos with native playback, plus a grid sort toggle and jump-to-month menu.
+- 🔍 **Zoom in the viewer** — pinch, double-click, or ＋/−/0 to zoom into any photo or Live Photo and drag to pan; **Space** opens a photo and toggles back to the grid.
+- 🎬 **Live Photos** — shown as photos with native playback that **opens instantly** (the still appears immediately, never a blank wait), plus a grid sort toggle and jump-to-month menu.
 - 📦 **Portable library** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file.
 - 🧹 **Clean folder removal** — optionally purge a removed folder's now-orphaned thumbnails and database rows; shared content and your original files are never touched.
 - 🔒 **Privacy-first** — your photos never leave your Mac. Anonymous crash reports and aggregate feature analytics help improve the app; no photos, file names, or personal data are transmitted.
