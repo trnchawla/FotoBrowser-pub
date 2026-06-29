@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.6.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.7.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -62,8 +62,9 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original.
 - 🧑‍🤝‍🧑 **People** — auto-clusters faces on-device, name a cluster to filter the grid by person, and merge/dismiss/remove tools to correct clustering mistakes.
 - 🪄 **Clean Up** — a focused day/trip review flow: Keep/Delete one day (or trip) at a time, with Like and Add-to-Album built in.
-- 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V.
-- ❤️ Albums & Likes · 🖨 Native printing (photo sizes, tiling, date stamp).
+- 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V; hovering shows floating controls without dimming the video.
+- ❤️ Albums & Likes · 🖨 **Native printing** — photo sizes and tiling, plus new **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
+- ⚡ **Fast startup & live activity** — the grid paints almost immediately at launch while indexing/analysis refine in the background, and a Background Activity panel shows what's being scanned and indexed (drive › folder · file, with live counts).
 - ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation live in a slide-in panel; **Revert to Original** undoes everything at once.
 - 🎬 **Live Photos** — shown as photos with native playback, plus a grid sort toggle and jump-to-month menu.
 - 📦 **Portable library** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file.
