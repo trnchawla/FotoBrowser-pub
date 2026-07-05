@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.8.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.8.1-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -71,6 +71,8 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 🎬 **Live Photos** — shown as photos with native playback that **opens instantly** (the still appears immediately, never a blank wait), plus a grid sort toggle and jump-to-month menu.
 - 📦 **Portable library** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file.
 - 🧹 **Clean folder removal** — optionally purge a removed folder's now-orphaned thumbnails and database rows; shared content and your original files are never touched.
+- 🆙 **Update checks** — checks GitHub on launch and shows a banner (with a Download button) when a newer version is ready; check anytime via **Check for Updates…**. No auto-updates.
+- ⚡ **Instant delete** — moving photos to Trash is zero-latency; the full-screen viewer stays open and advances to the next photo so you can cull a burst without leaving it.
 - 🔒 **Privacy-first** — your photos never leave your Mac. Anonymous crash reports and aggregate feature analytics help improve the app; no photos, file names, or personal data are transmitted.
 
 ## Privacy
