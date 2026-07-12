@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.8.1-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.9.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -69,7 +69,7 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation live in a slide-in panel; **Revert to Original** undoes everything at once.
 - 🔍 **Zoom in the viewer** — pinch, double-click, or ＋/−/0 to zoom into any photo or Live Photo and drag to pan; **Space** opens a photo and toggles back to the grid.
 - 🎬 **Live Photos** — shown as photos with native playback that **opens instantly** (the still appears immediately, never a blank wait), plus a grid sort toggle and jump-to-month menu.
-- 📦 **Portable library** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file.
+- 📦 **Portable library, openable from Finder** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file. **Double-click a `.fblibrary` in Finder** — even on an external drive — to open or switch to it (now with a custom document icon), or use **Library ▸ Open Library…**.
 - 🧹 **Clean folder removal** — optionally purge a removed folder's now-orphaned thumbnails and database rows; shared content and your original files are never touched.
 - 🆙 **Update checks** — checks GitHub on launch and shows a banner (with a Download button) when a newer version is ready; check anytime via **Check for Updates…**. No auto-updates.
 - ⚡ **Instant delete** — moving photos to Trash is zero-latency; the full-screen viewer stays open and advances to the next photo so you can cull a burst without leaving it.
