@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.10.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.10.1-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -53,7 +53,7 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 ## Highlights
 
 - 🖼 **Fast timeline grid** with month/year sections and lazy thumbnails — handles large libraries.
-- 🗂 **Watched folders & drives** — your files are never moved without you.
+- 🗂 **Watched folders & drives** — your files are never moved without you. **Rescan Folders** (⌥⌘R, or right-click a folder) re-scans on demand for anything added while the app was open.
 - 💾 **Drive roles** — Internal / Master / **Vault** (read-only, never modified).
 - 🔌 **Offline-drive aware** — placeholders for disconnected drives, full-res from a connected copy.
 - 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
@@ -62,7 +62,7 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original.
 - 🧑‍🤝‍🧑 **People** — auto-clusters faces on-device, name a cluster to filter the grid by person, and merge/dismiss/remove tools to correct clustering mistakes.
 - 🪄 **Clean Up** — a focused day/trip review flow: Keep/Delete one day (or trip) at a time, with Like and Add-to-Album built in.
-- 📷 **RAW & HEIF** — indexes and displays camera RAW files (CR3, CR2, NEF, ARW, RAF, DNG…) and HEIF alongside your JPEGs, using each RAW's embedded preview for fast thumbnails. FotoBrowser never re-encodes a RAW, so originals stay untouched (Set Location isn't available on RAW).
+- 📷 **RAW & HEIF** — indexes and displays camera RAW files (CR3, CR2, NEF, ARW, RAF, DNG…) and HEIF alongside your JPEGs, using each RAW's embedded preview for fast thumbnails. FotoBrowser never re-encodes a RAW, so originals stay untouched (Set Location isn't available on RAW). A dedicated **RAW** item in the sidebar shows only your camera-RAW files.
 - 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V; hovering shows floating controls without dimming the video.
 - ❤️ Albums & Likes · 🖨 **Native printing** — photo sizes and tiling, plus new **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
 - 📤 **Share & drag out** — Share any selection to AirDrop/Messages/Mail/Save to Files (edits baked in "as seen"), drag photos straight into Finder or another app, and drop a Finder folder onto the sidebar to add it.
