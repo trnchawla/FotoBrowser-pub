@@ -60,11 +60,13 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
 - 🔎 **Find Similar Photos** — perceptual near-duplicate detection (on-device Vision) with quality scoring and a fast keep/trash review.
 - 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original.
+- 🕰️ **Set Date/Time** — a scan, screenshot, or wrong-clock photo with no capture time? Right-click ▸ **Set Date/Time** writes a corrected capture date straight into the file's EXIF, just like Set Location does for GPS. Multi-select to stamp one time onto many; RAW files are left untouched.
 - 🧑‍🤝‍🧑 **People** — auto-clusters faces on-device, name a cluster to filter the grid by person, and merge/dismiss/remove tools to correct clustering mistakes.
 - 🪄 **Clean Up** — a focused day/trip review flow: Keep/Delete one day (or trip) at a time, with Like and Add-to-Album built in.
 - 📷 **RAW & HEIF** — indexes and displays camera RAW files (CR3, CR2, NEF, ARW, RAF, DNG…) and HEIF alongside your JPEGs, using each RAW's embedded preview for fast thumbnails. FotoBrowser never re-encodes a RAW, so originals stay untouched (Set Location isn't available on RAW). A dedicated **RAW** item in the sidebar shows only your camera-RAW files.
 - 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V; hovering shows floating controls without dimming the video.
-- ❤️ Albums & Likes · 🖨 **Native printing** — photo sizes and tiling, plus new **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
+- ❤️ **Albums & Likes** — organise into albums and mark favourites, shared across every copy of a photo. **Pin** your most-used albums to the top, drag to reorder, tuck the rest under **More Albums**, and **search albums by name**.
+- 🖨 **Native printing** — photo sizes and tiling, plus **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
 - 📤 **Share & drag out** — Share any selection to AirDrop/Messages/Mail/Save to Files (edits baked in "as seen"), drag photos straight into Finder or another app, and drop a Finder folder onto the sidebar to add it.
 - ⚡ **Fast startup & live activity** — the grid paints almost immediately at launch while indexing/analysis refine in the background, and a Background Activity panel shows what's being scanned and indexed (drive › folder · file, with live counts).
 - ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation live in a slide-in panel; edits apply **instantly** with no full-library reload, and **Revert to Original** undoes everything at once.
@@ -73,7 +75,7 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 📦 **Portable library, openable from Finder** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file. **Double-click a `.fblibrary` in Finder** — even on an external drive — to open or switch to it (now with a custom document icon), or use **Library ▸ Open Library…**.
 - 🧹 **Clean folder removal** — optionally purge a removed folder's now-orphaned thumbnails and database rows; shared content and your original files are never touched.
 - 🆙 **Update checks** — checks GitHub on launch and shows a banner (with a Download button) when a newer version is ready; check anytime via **Check for Updates…**. No auto-updates.
-- ⚡ **Instant delete** — moving photos to Trash is zero-latency; the full-screen viewer stays open and advances to the next photo so you can cull a burst without leaving it.
+- ⚡ **Instant delete** — moving photos to Trash is zero-latency; the full-screen viewer stays open and advances to the next photo so you can cull a burst without leaving it. A copy on an **unplugged drive** is queued and trashed automatically when the drive reconnects (review or cancel from a **Pending** sheet), so a deleted photo never resurfaces on re-scan.
 - 🔒 **Privacy-first** — your photos never leave your Mac. Anonymous crash reports and aggregate feature analytics help improve the app; no photos, file names, or personal data are transmitted.
 
 ## Privacy
