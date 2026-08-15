@@ -41,6 +41,9 @@
     font-weight:700; padding:14px 26px; border-radius:14px; box-shadow:0 10px 30px var(--ring); }
   .sub { display:block; margin-top:12px; color:var(--muted); font-size:14px; }
   .shot { width:100%; border-radius:16px; margin:36px 0; border:1px solid rgba(128,128,128,.18); }
+  .video { position:relative; width:100%; padding-top:56.25%; margin:36px 0; border-radius:16px;
+    overflow:hidden; border:1px solid rgba(128,128,128,.18); }
+  .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
   section { padding: 26px 0; }
   h2 { font-size: 26px; margin: 0 0 16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
@@ -72,6 +75,16 @@
 
   <!-- Hero screenshot -->
   <img class="shot" src="assets/screenshot-hero.png" alt="FotoBrowser — every photo, beautifully in one place" />
+
+  <section>
+    <h2>See it in action</h2>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/p2xv_TNXEvs"
+        title="The Apple Photos alternative that reads your own folders | FotoBrowser for Mac"
+        loading="lazy" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    </div>
+  </section>
 
   <section class="why">
     <h2>Why FotoBrowser?</h2>

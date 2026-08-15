@@ -14,6 +14,12 @@ fragile, proprietary library. Everything runs on your Mac — no account, no clo
 
 Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 
+## Watch the demo
+
+[![Watch FotoBrowser on YouTube — the Apple Photos alternative that reads your own folders](https://img.youtube.com/vi/p2xv_TNXEvs/maxresdefault.jpg)](https://youtu.be/p2xv_TNXEvs)
+
+> ▶️ **[The Apple Photos alternative that reads your own folders](https://youtu.be/p2xv_TNXEvs)** — a quick tour of FotoBrowser for Mac.
+
 ## Screenshots
 
 **Every photo, beautifully in one place** — a fast timeline or flat grid over your own folders, with watched folders & drive roles in the sidebar.
