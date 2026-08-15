@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.10.2-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.11.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -16,25 +16,29 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 
 ## Screenshots
 
-**Timeline grid** — month/year sections, watched folders & drive roles in the sidebar.
+**Every photo, beautifully in one place** — a fast timeline or flat grid over your own folders, with watched folders & drive roles in the sidebar.
 
-![Timeline grid](assets/screenshot-timeline.png)
+![Every photo, beautifully in one place](assets/screenshot-hero.png)
 
-**Import from iPhone** — browse the device over USB and import only what's new.
+**A clean, full-screen photo experience** — browse, zoom, and pan with the keyboard; print or share straight from the viewer.
 
-![Import from iPhone](assets/screenshot-import.png)
+![A clean, full-screen photo experience](assets/screenshot-viewer.png)
 
-**Duplicate detection** — find duplicates across folders and resolve them safely in bulk.
+**Clean up your library, one photo at a time** — a focused Keep/Delete review flow, one day or trip at a time.
 
-![Resolve duplicates](assets/screenshot-duplicates.png)
+![Clean up your library, one photo at a time](assets/screenshot-cleanup.png)
 
-**Native printing** — print at real photo sizes, with crop…
+**Find duplicates and reclaim your space** — detect duplicates across folders and resolve them safely in bulk.
 
-![Print a single photo](assets/screenshot-print-single.png)
+![Find duplicates and reclaim your space](assets/screenshot-duplicates.png)
 
-…or tile multiple copies per sheet.
+**Print passport photos — right at home** — real photo sizes with tiling; repeat one photo to fill a sheet.
 
-![Print photo sizes / tiling](assets/screenshot-print-sizes.png)
+![Print passport photos — right at home](assets/screenshot-print.png)
+
+**Photos and videos, together** — MOV, MP4, and M4V indexed alongside your photos, with native playback controls.
+
+![Photos and videos, together](assets/screenshot-video.png)
 
 ## Requirements
 
@@ -52,7 +56,7 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 
 ## Highlights
 
-- 🖼 **Fast timeline grid** with month/year sections and lazy thumbnails — handles large libraries.
+- 🖼 **Fast timeline grid** with month/year sections and lazy thumbnails — handles large libraries. A **Timeline / Flat** toggle flips any grid to a flat, edge-to-edge layout (remembered per view; curated views like Liked and Albums default to flat).
 - 🗂 **Watched folders & drives** — your files are never moved without you. **Rescan Folders** (⌥⌘R, or right-click a folder) re-scans on demand for anything added while the app was open.
 - 💾 **Drive roles** — Internal / Master / **Vault** (read-only, never modified).
 - 🔌 **Offline-drive aware** — placeholders for disconnected drives, full-res from a connected copy.
@@ -69,8 +73,8 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 🖨 **Native printing** — photo sizes and tiling, plus **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
 - 📤 **Share & drag out** — Share any selection to AirDrop/Messages/Mail/Save to Files (edits baked in "as seen"), drag photos straight into Finder or another app, and drop a Finder folder onto the sidebar to add it.
 - ⚡ **Fast startup & live activity** — the grid paints almost immediately at launch while indexing/analysis refine in the background, and a Background Activity panel shows what's being scanned and indexed (drive › folder · file, with live counts).
-- ✏️ **Non-destructive editing** — rotate, crop, and adjust Brightness/Contrast/Saturation live in a slide-in panel; edits apply **instantly** with no full-library reload, and **Revert to Original** undoes everything at once.
-- 🔍 **Zoom in the viewer** — pinch, double-click, or ＋/−/0 to zoom into any photo or Live Photo and drag to pan; **Space** opens a photo and toggles back to the grid.
+- ✏️ **Non-destructive editing** — rotate and crop without ever touching the original file; edits apply **instantly** with no full-library reload, and **Revert to Original** undoes everything at once.
+- 🔍 **Zoom in the viewer** — pinch, double-click, or ＋/−/0 to zoom into any photo or Live Photo; drag or the **arrow keys** pan a zoomed shot, and **Esc** snaps back to fit. **Space** opens a photo and toggles back to the grid.
 - 🎬 **Live Photos** — shown as photos with native playback that **opens instantly** (the still appears immediately, never a blank wait), plus a grid sort toggle and jump-to-month menu.
 - 📦 **Portable library, openable from Finder** — database and thumbnails live in one `.fblibrary` bundle, defaulting to `~/Pictures`, that you can move or back up like any other file. **Double-click a `.fblibrary` in Finder** — even on an external drive — to open or switch to it (now with a custom document icon), or use **Library ▸ Open Library…**.
 - 🧹 **Clean folder removal** — optionally purge a removed folder's now-orphaned thumbnails and database rows; shared content and your original files are never touched.
