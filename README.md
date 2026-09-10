@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.11.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.12.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -69,14 +69,15 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
 - 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
 - 🔎 **Find Similar Photos** — perceptual near-duplicate detection (on-device Vision) with quality scoring and a fast keep/trash review.
-- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original.
-- 🕰️ **Set Date/Time** — a scan, screenshot, or wrong-clock photo with no capture time? Right-click ▸ **Set Date/Time** writes a corrected capture date straight into the file's EXIF, just like Set Location does for GPS. Multi-select to stamp one time onto many; RAW files are left untouched.
+- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original — only the metadata is rewritten, so the picture is copied across untouched. Tagging thousands runs in the background with progress and a Stop button.
+- 🕰️ **Set Date/Time** — a scan, screenshot, or wrong-clock photo with no capture time? Right-click ▸ **Set Date/Time** writes a corrected capture date straight into the file's EXIF, just like Set Location does for GPS. Multi-select to stamp one time onto many; like Set Location it rewrites only the metadata, never re-saving the picture. RAW files are left untouched.
 - 🧑‍🤝‍🧑 **People** — auto-clusters faces on-device, name a cluster to filter the grid by person, and merge/dismiss/remove tools to correct clustering mistakes.
 - 🪄 **Clean Up** — a focused day/trip review flow: Keep/Delete one day (or trip) at a time, with Like and Add-to-Album built in.
 - 📷 **RAW & HEIF** — indexes and displays camera RAW files (CR3, CR2, NEF, ARW, RAF, DNG…) and HEIF alongside your JPEGs, using each RAW's embedded preview for fast thumbnails. FotoBrowser never re-encodes a RAW, so originals stay untouched (Set Location isn't available on RAW). A dedicated **RAW** item in the sidebar shows only your camera-RAW files.
 - 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V; hovering shows floating controls without dimming the video.
 - ❤️ **Albums & Likes** — organise into albums and mark favourites, shared across every copy of a photo. **Pin** your most-used albums to the top, drag to reorder, tuck the rest under **More Albums**, and **search albums by name**.
 - 🖨 **Native printing** — photo sizes and tiling, plus **2-up/4-up grid** and **Instant-film (Polaroid)** layouts with auto spacing and an optional date stamp.
+- 📂 **Open from Finder, hand off to Preview** — right-click a photo in Finder ▸ **Open With ▸ FotoBrowser**: photos in your library open in the viewer, photos outside it open read-only with **Print** and **Add to Library**. **Open in Preview** hands a selection to Apple's Preview, **Copy Path** copies file paths, and photos edited elsewhere refresh their thumbnail automatically.
 - 📤 **Share & drag out** — Share any selection to AirDrop/Messages/Mail/Save to Files (edits baked in "as seen"), drag photos straight into Finder or another app, and drop a Finder folder onto the sidebar to add it.
 - ⚡ **Fast startup & live activity** — the grid paints almost immediately at launch while indexing/analysis refine in the background, and a Background Activity panel shows what's being scanned and indexed (drive › folder · file, with live counts).
 - ✏️ **Non-destructive editing** — rotate and crop without ever touching the original file; edits apply **instantly** with no full-library reload, and **Revert to Original** undoes everything at once.
