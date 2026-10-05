@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.13.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.13.1-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
