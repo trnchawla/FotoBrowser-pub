@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Confirm your email — FotoBrowser</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfd;
+    --fg: #1d1d1f;
+    --muted: #6e6e73;
+    --card: #ffffff;
+    --border: #e3e3e6;
+    --accent: #0a6cff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141416;
+      --fg: #f5f5f7;
+      --muted: #9a9aa0;
+      --card: #1d1d20;
+      --border: #313135;
+      --accent: #4e9bff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 12px; }
+  p { margin: 0 0 14px; }
+  .muted { color: var(--muted); font-size: 0.92rem; }
+  .btn {
+    display: inline-block;
+    margin: 6px 0 18px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .fallback { border-top: 1px solid var(--border); margin-top: 22px; padding-top: 18px; }
+  code {
+    display: block;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.78rem;
+    word-break: break-all;
+    user-select: all;
+  }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main class="card">
+  <div id="ok" hidden>
+    <h1>Opening FotoBrowser…</h1>
+    <p>Your email is being confirmed in the app. You can close this tab once FotoBrowser comes to the front.</p>
+    <p><a class="btn" id="retry" href="#">Open FotoBrowser</a></p>
+
+    <div class="fallback">
+      <p class="muted">
+        Nothing happened? Your browser may be blocking the handoff. Copy the link
+        below, then in FotoBrowser choose <strong>FotoBrowser &rsaquo; Set Email…</strong>
+        and paste it when asked.
+      </p>
+      <code id="raw"></code>
+    </div>
+  </div>
+
+  <div id="bad" hidden>
+    <h1>This link isn't complete</h1>
+    <p>
+      It's missing the confirmation code — that usually means the address bar got
+      truncated, or the link was already used.
+    </p>
+    <p class="muted">
+      Open FotoBrowser, choose <strong>FotoBrowser &rsaquo; Set Email…</strong> and
+      send yourself a fresh confirmation.
+    </p>
+  </div>
+</main>
+
+<script>
+  // Firebase's action handler redirects here with the one-time code still in
+  // the query string. The Mac app wants the WHOLE landing URL, not a code we
+  // picked out of it — the Firebase SDK parses the code itself, and handing it
+  // the full URL is what its API expects.
+  (function () {
+    var here = window.location.href;
+    var params = new URLSearchParams(window.location.search);
+
+    // No code means there is nothing the app could redeem.
+    if (!params.get("oobCode")) {
+      document.getElementById("bad").hidden = false;
+      return;
+    }
+
+    var deepLink = "fotobrowser://verify?link=" + encodeURIComponent(here);
+
+    document.getElementById("ok").hidden = false;
+    document.getElementById("raw").textContent = here;
+    document.getElementById("retry").href = deepLink;
+
+    // Hand off to the app. Browsers differ on whether this needs a user
+    // gesture, which is exactly why the button and the copyable link above
+    // exist as fallbacks rather than being an afterthought.
+    window.location.href = deepLink;
+  })();
+</script>
+</body>
+</html>
