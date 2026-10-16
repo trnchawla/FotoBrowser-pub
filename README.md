@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.13.1-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.13.2-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -79,6 +79,7 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 🖨 **Native printing** — photo sizes and tiling, plus **2-up/4-up grid** and **Caption** layouts (each photo framed with a wider white strip below, Polaroid/Instax-style) with auto spacing and an optional date stamp.
 - 📂 **Open from Finder, hand off to Preview** — right-click a photo in Finder ▸ **Open With ▸ FotoBrowser**: photos in your library open in the viewer, photos outside it open read-only with **Print** and **Add to Library**. **Open in Preview** hands a selection to Apple's Preview, **Copy Path** copies file paths, and photos edited elsewhere refresh their thumbnail automatically.
 - 📤 **Share & drag out** — Share any selection to AirDrop/Messages/Mail/Save to Files (edits baked in "as seen"), drag photos straight into Finder or another app, and drop a Finder folder onto the sidebar to add it.
+- 🧱 **Steady with big RAW libraries** — browsing quickly through folders of RAW files, exporting, sharing and playing clips straight off a camera all keep the grid loading and the window responsive, however fast you move.
 - ⚡ **Fast startup & live activity** — the grid paints almost immediately at launch while indexing/analysis refine in the background, and a Background Activity panel shows what's being scanned and indexed (drive › folder · file, with live counts).
 - ✏️ **Non-destructive editing** — rotate, crop, and **develop tone and colour** without ever touching the original file. Press **A** for an Adjust panel with three groups behind a segmented control: **Light** (Exposure, Contrast, Clarity and a five-part tone curve), **Colour** (Temperature, Tint, Saturation, Vibrance) and **Black & White**. The photo updates live as you drag; every control can be typed into exactly, double-clicked to reset, or nudged with the arrow keys. RAW is developed at **16-bit**, so pushing a curve hard leaves smooth gradients rather than banding. Edits apply **instantly** with no full-library reload, and **Revert to Original** undoes everything at once.
 - ⚫️ **Black & white** — one switch converts a photo, with a **filter effect** (Yellow / Orange / Red / Green) deciding which colours come out light and which come out dark, and a **toning effect** (Sepia / Blue / Purple / Green) for a warm or cool cast over the finished print.
