@@ -6,7 +6,7 @@ FotoBrowser is a fast, local-first photo browser for Mac. Point it at your folde
 drives and get a clean timeline grid over your pictures, without copying them into a
 fragile, proprietary library. Everything runs on your Mac — no account, no cloud required.
 
-> ⚠️ **Alpha** (`0.13.2-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
+> ⚠️ **Alpha** (`0.14.0-alpha`). Usable day-to-day, but expect rough edges. Feedback very welcome.
 
 ## Download
 
@@ -62,6 +62,9 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 
 ## Highlights
 
+- 📅 **Events** *(new)* — your library sorted into occasions automatically: busy days become events, and runs of days **away from home** become a trip named after the place (*"Dublin trip"*); homes are worked out from your own photos. Name, **merge**, **split**, **pin** or **hide** any event, select photos anywhere and choose **Make Event…**, and **Set Location…** on an event (optionally writing it into its photos that have none, never overwriting one).
+- ✨ **Year Memories** *(new)* — a *"Best of 2025"* for every year, picking your strongest shots spread across the year with every named event and trip represented. Remove a photo and the next best takes its place; opening a memory scores that year's not-yet-analyzed photos in the background (**View ▸ Analyze Memories Automatically**, **Analyze Now**, **Stop**).
+- 🎛 **Filters that stay put** *(new)* — Liked, Printed, media type, Live Photos and RAW (**Show All / Only RAW / Hide RAW**), remembered across launches; a picker the current view already decides is greyed out with a note instead of emptying the grid.
 - 🖼 **Fast timeline grid** with month/year sections and lazy thumbnails — handles large libraries. A **Timeline / Flat** toggle flips any grid to a flat, edge-to-edge layout (remembered per view; curated views like Liked and Albums default to flat).
 - 🗂 **Watched folders & drives** — your files are never moved without you. **Rescan Folders** (⌥⌘R, or right-click a folder) re-scans on demand for anything added while the app was open.
 - 💾 **Drive roles** — Internal / Master / **Vault** (read-only, never modified).
@@ -69,13 +72,13 @@ Or visit the [landing page](https://trnchawla.github.io/FotoBrowser-pub/).
 - 📱 **Import from iPhone** over USB — copy-only, with a "new since last import" date.
 - 🧬 **Duplicate detection** + safe bulk resolve + **Reclaim Space**.
 - 🔎 **Find Similar Photos** — perceptual near-duplicate detection (on-device Vision) with quality scoring and a fast keep/trash review.
-- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original — only the metadata is rewritten, so the picture is copied across untouched. Tagging thousands runs in the background with progress and a Stop button.
+- 📍 **Places** — see where each photo was taken (city · region · country) from EXIF GPS, via a bundled offline database (no network needed). No GPS? **Set Location by city name** to embed it directly into the original — only the metadata is rewritten, so the picture is copied across untouched. Tagging thousands runs in the background with progress and a Stop button. Photos indexed by older versions get their locations read from the files automatically.
 - 🕰️ **Set Date/Time** — a scan, screenshot, or wrong-clock photo with no capture time? Right-click ▸ **Set Date/Time** writes a corrected capture date straight into the file's EXIF, just like Set Location does for GPS. Multi-select to stamp one time onto many; like Set Location it rewrites only the metadata, never re-saving the picture. RAW files are left untouched.
 - 🧑‍🤝‍🧑 **People** — auto-clusters faces on-device, name a cluster to filter the grid by person, and merge/dismiss/remove tools to correct clustering mistakes.
 - 🪄 **Clean Up** — a focused day/trip review flow: Keep/Delete one day (or trip) at a time, with Like and Add-to-Album built in.
 - 📷 **RAW & HEIF** — indexes and displays camera RAW files (CR3, CR2, NEF, ARW, RAF, DNG…) and HEIF alongside your JPEGs, using each RAW's embedded preview for fast thumbnails. FotoBrowser never re-encodes a RAW, so originals stay untouched (Set Location isn't available on RAW). A dedicated **RAW** item in the sidebar shows only your camera-RAW files, and **Export RAW as JPEG** (the viewer's ••• menu) writes a full-resolution, maximum-quality JPEG beside the original with your edits baked in and EXIF/GPS carried across — always named `<name>-raw.jpg`, so the camera's own JPEG from a RAW+JPEG shoot is never overwritten.
 - 📹 **Video support** — index, thumbnails, and playback for MOV, MP4, and M4V; hovering shows floating controls without dimming the video.
-- ❤️ **Albums & Likes** — organise into albums and mark favourites, shared across every copy of a photo. **Pin** your most-used albums to the top, drag to reorder, tuck the rest under **More Albums**, and **search albums by name**.
+- ❤️ **Albums & Likes** — organise into albums and mark favourites, shared across every copy of a photo. **Pin** your most-used albums to the top, drag to reorder, tuck the rest under **More Albums**, and **search albums by name**. The **Library** rows can be dragged into your own order too (**Reset Sidebar Order** restores it).
 - 🖨 **Native printing** — photo sizes and tiling, plus **2-up/4-up grid** and **Caption** layouts (each photo framed with a wider white strip below, Polaroid/Instax-style) with auto spacing and an optional date stamp.
 - 📂 **Open from Finder, hand off to Preview** — right-click a photo in Finder ▸ **Open With ▸ FotoBrowser**: photos in your library open in the viewer, photos outside it open read-only with **Print** and **Add to Library**. **Open in Preview** hands a selection to Apple's Preview, **Copy Path** copies file paths, and photos edited elsewhere refresh their thumbnail automatically.
 - 📤 **Share & drag out** — Share any selection to AirDrop/Messages/Mail/Save to Files (edits baked in "as seen"), drag photos straight into Finder or another app, and drop a Finder folder onto the sidebar to add it.
