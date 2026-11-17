@@ -1,0 +1,133 @@
+# FotoBrowser — full description
+
+> FotoBrowser is a free, local-first photo browser for macOS: an Apple Photos alternative that works with the photos in your own folders and drives instead of a single photo library. No cloud, no account, no subscription.
+
+- Website: https://trnchawla.github.io/FotoBrowser-pub/
+- Download (latest release, free): https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg
+- Comparison with Apple Photos: https://trnchawla.github.io/FotoBrowser-pub/apple-photos-alternative.html
+- Release notes: https://github.com/trnchawla/FotoBrowser-pub/releases
+- Bugs and questions: https://github.com/trnchawla/FotoBrowser-pub/issues
+- Made by Tarun Chawla
+
+## Key facts
+
+- Platform: macOS 15 Sequoia or later; one universal app for Apple Silicon and Intel Macs. Mac only — no iPhone, iPad, Windows or web version.
+- Price: free to download. No subscription, no in-app purchases, no account required.
+- Stage: alpha — usable day to day, with rough edges. The download isn't notarized yet, so macOS asks you to allow it once (System Settings → Privacy & Security → Open Anyway).
+- Source code: not public. FotoBrowser is not open source.
+- Where photos live: as ordinary files in folders you choose, on your Mac's disk and on external or backup drives. FotoBrowser keeps its own database and thumbnails in one `.fblibrary` bundle (in ~/Pictures by default) that you can move or back up like any file.
+
+## Who it's for
+
+- People who keep photos in folders, or spread across several external and backup drives.
+- RAW photographers who want their originals never rewritten.
+- People who'd rather not keep everything inside one Apple Photos library, or in iCloud.
+- Anyone who wants duplicates found across all their folders and drives.
+
+## Features
+
+### Browsing
+- Fast timeline grid with month and year sections and lazy thumbnails, smooth on tens of thousands of photos; a Timeline / Flat toggle per view.
+- Full-screen viewer: zoom (pinch, double-click, + / − / 0), pan with the arrow keys, Live Photos with press-and-hold playback, video playback (MOV, MP4, M4V).
+- Filters that are remembered across launches: Liked, Printed, media type, Live Photos, RAW (Show All / Only RAW / Hide RAW) and location (Only With / Only Without).
+- Albums and favourites (Likes), shared across every copy of a photo; pin, reorder and search albums.
+
+### Your folders and drives
+- Watch any folders on any drives. Files are never moved without you. Rescan Folders (⌥⌘R) picks up anything added while the app was open.
+- Drive roles: Internal, Master and read-only Vault drives that are never modified.
+- Disconnected drives: photos stay in the grid as placeholders from the thumbnail cache, and open at full size from a copy on a connected drive. Deletes and metadata changes for an unplugged drive are queued and applied when it's plugged back in.
+- Import from iPhone over USB: copy-only (never deletes from the phone), into a folder you choose, with a "new since last import" date.
+- Open from Finder (Open With ▸ FotoBrowser), Open in Preview, Copy Path, Share (AirDrop, Messages, Mail, Save to Files), and drag photos out to Finder or other apps.
+
+### Organising
+- Duplicates detected by content across every folder and drive, with safe bulk resolve and Reclaim Space.
+- Find Similar Photos: on-device near-duplicate detection (bursts, re-takes) with quality scoring and a fast keep/trash review.
+- Clean Up: a focused Keep/Delete review, one day or trip at a time.
+- People: on-device face clustering; name, merge, dismiss and remove to correct it.
+- Places: where each photo or iPhone video was taken, from GPS, via a bundled offline database, with a small map in the Inspector.
+- Events: busy days become events and days away from home become trips named after the place ("Dublin trip"); name, merge, split, pin, hide or set a location on any event.
+- Year Memories: a "Best of" for every year, with your strongest shots across the year.
+
+### Fixing metadata
+- Set Location: type a place name (offline list, or Apple Maps if you allow it), paste coordinates or a Google/Apple Maps link, or drop a pin. Copy / Paste / Remove Location.
+- Set Date/Time for scans, screenshots and wrong-clock photos.
+- Both apply instantly in the library, even to thousands of photos, and are written into the files' metadata in the background without re-saving the picture. Every change can be undone; Revert to Original puts back what a photo had before FotoBrowser first changed it.
+- RAW files are never written: their location, date, title and keywords go into an `.xmp` sidecar beside them, added to any existing Lightroom or darktable sidecar.
+- Titles, descriptions and keywords for stock sites (Shutterstock, Adobe Stock, Alamy), written into the files; Export for Stock makes upload-ready JPEGs with an optional CSV; Suggest Keywords uses Apple Vision and, on macOS 26, Apple Intelligence — on the Mac, only when asked.
+
+### Editing and output
+- Non-destructive editing: rotate, crop, and an Adjust panel with Exposure, Contrast, Clarity, a five-part tone curve, Temperature, Tint, Saturation, Vibrance and Black & White (filter and toning effects). Edits live in FotoBrowser's library, never in the original file; Revert to Original removes them.
+- Histogram and clipping warnings in the Inspector or over the photo.
+- RAW (CR3, CR2, NEF, ARW, RAF, DNG and more) and HEIF alongside JPEG; Export RAW as JPEG at full resolution with edits applied.
+- Native printing: real photo sizes and tiling, 2-up/4-up grid and caption layouts, optional date stamp, passport-style photo sizes.
+
+## FotoBrowser compared with Apple Photos
+
+| | Apple Photos | FotoBrowser |
+|---|---|---|
+| Where your photos live | Inside one Photos library package (.photoslibrary) | As ordinary files in your own folders |
+| Several drives | One library open at a time; it can live on an external drive | Folders on any number of internal and external drives at once |
+| Unplugged drives | The library's drive must be connected to open it | Placeholders in the grid; full size from any connected copy |
+| Backup drives | — | Read-only Vault drives that are never modified |
+| Duplicates | A Duplicates album inside the library | By content across every folder and drive, plus near-duplicates and Reclaim Space |
+| RAW files | Supported | Supported; RAW files are never rewritten (sidecars for metadata) |
+| Editing | Non-destructive | Non-destructive, with a tone curve, black & white and a histogram |
+| People, places, memories | Yes | People (on-device), Places (offline database, map), Events, trips, yearly Best of |
+| Fixing location and date | Changed inside the library | Written into the files' metadata, with Undo |
+| Titles and keywords | Inside the library | Written into the files; Export for Stock with CSV |
+| iPhone photos | iCloud Photos sync, or import over USB | Import over USB (copy-only); no iCloud sync |
+| Other devices | iPhone, iPad and the web through iCloud | Mac only |
+| Printing | Through the macOS print dialog | Photo sizes, tiling, grid and caption layouts, date stamp |
+| Price | Included with macOS; iCloud storage is extra | Free |
+
+## Moving from Apple Photos
+
+1. In Photos, select the photos (⌘A for all), choose File ▸ Export ▸ Export Unmodified Originals, and pick a folder.
+2. In FotoBrowser, click ＋ in the sidebar and add that folder (or drag the folder onto the sidebar).
+3. FotoBrowser indexes it and reads the dates, locations and keywords in the files. Nothing is removed from Photos; both apps can be used side by side.
+
+## Privacy
+
+- Photos, thumbnails, file names and folder paths never leave the Mac.
+- Anonymous crash reports (Firebase Crashlytics) and aggregate usage analytics (Firebase Analytics) — no photos, file names, folder paths or personal data.
+- Optional: an email address for update news, opt-in only.
+- The internet is also used to check for updates (GitHub), to show the Inspector's map, and — if you allow it — to look up places in Apple Maps.
+
+## Frequently asked questions
+
+**Is FotoBrowser an alternative to Apple Photos?**
+Yes. It gives you an Apple Photos-style timeline and viewer, with albums, favourites, People, Places, Events, yearly Memories and non-destructive editing — over ordinary folders on your own drives instead of one .photoslibrary.
+
+**Is FotoBrowser free?**
+Yes. It's free to download, with no subscription, no in-app purchases and no account to create.
+
+**Does it move or copy my photos?**
+No. It reads your photos where they are, on your Mac or on external drives. Files are only moved or deleted when you choose to; iPhone import copies photos into a folder without deleting them from the phone.
+
+**Does it change my original files?**
+Only when you ask, and only the metadata: a location, date, title or keywords you set are written into the photo's file without re-saving the picture. RAW files are never written (an .xmp sidecar is used). Crops, rotations and colour adjustments stay in FotoBrowser's library. Vault drives are never modified.
+
+**Can I use FotoBrowser and Apple Photos at the same time?**
+Yes. FotoBrowser never opens or changes your Photos library, so both can run side by side.
+
+**Can FotoBrowser open my Apple Photos library?**
+No. It doesn't read inside a .photoslibrary. Export the originals from Photos into a folder and add that folder.
+
+**Does it sync with iCloud Photos?**
+No. Photos stay on your Mac's drives. iPhone photos come in over a USB cable.
+
+**What does Apple Photos do that FotoBrowser doesn't?**
+iCloud Photos sync, apps for iPhone and iPad, shared albums, and Memories movies.
+
+**Which Macs does it run on?**
+macOS 15 Sequoia or later, on Apple Silicon and Intel.
+
+## Known limitations
+
+- Alpha, and not notarized yet: macOS asks you to allow the first launch.
+- No iCloud sync, no shared albums, and no iPhone, iPad or Windows version.
+- A RAW and its camera JPEG show as two items (no RAW+JPEG pairing yet).
+- New files on an external drive may not appear until you use Rescan Folders.
+- Face clustering uses a general-purpose Vision feature print, so it can occasionally mix two people or miss a match; merge and remove tools correct it.
+- A video's location, date, title and keywords are kept in FotoBrowser, not written into the video file.
+- The full, current list is in the latest release notes.

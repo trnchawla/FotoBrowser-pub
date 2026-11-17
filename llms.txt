@@ -1,0 +1,21 @@
+# FotoBrowser
+
+> FotoBrowser is a free, local-first photo browser for macOS: an Apple Photos alternative that works with the photos in your own folders and drives instead of a single photo library. No cloud, no account, no subscription. macOS 15 Sequoia or later, Apple Silicon and Intel.
+
+FotoBrowser gives Mac users an Apple Photos-style timeline, viewer, albums, favourites, People, Places, Events and yearly Memories, plus non-destructive editing, over photos that stay as ordinary files in ordinary folders — on the Mac's own disk, on external drives and on backup drives. It suits people who keep photos in folders or across several drives, RAW photographers who want originals never rewritten, and anyone who'd rather not keep everything inside one `.photoslibrary` or in iCloud. It finds duplicates across every folder and drive, keeps working when a drive is unplugged, and writes locations, dates and keywords into the files' metadata only when asked.
+
+It does not sync with iCloud Photos, can't open an Apple Photos library directly (export the originals to a folder first), and has no iPhone, iPad or Windows version. It's an alpha release: usable day to day, with rough edges.
+
+## Download and docs
+
+- [Download FotoBrowser.dmg](https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg): the latest release, free
+- [Website](https://trnchawla.github.io/FotoBrowser-pub/): features, screenshots, install steps and FAQ
+- [FotoBrowser vs Apple Photos](https://trnchawla.github.io/FotoBrowser-pub/apple-photos-alternative.html): comparison table, moving from Apple Photos, FAQ
+- [Full description](https://trnchawla.github.io/FotoBrowser-pub/llms-full.txt): every feature, requirements, privacy, limitations and FAQ in one plain-text file
+- [README on GitHub](https://github.com/trnchawla/FotoBrowser-pub#readme): highlights, privacy and install details
+- [Release notes](https://github.com/trnchawla/FotoBrowser-pub/releases): what changed in each version, and current known limitations
+
+## Optional
+
+- [Demo video (1 min 21 s)](https://youtu.be/p2xv_TNXEvs): "The Apple Photos alternative that reads your own folders"
+- [Report a bug or ask a question](https://github.com/trnchawla/FotoBrowser-pub/issues)

@@ -1,20 +1,227 @@
 <!doctype html>
 <!--
-  FotoBrowser landing page (static, GitHub Pages friendly).
-
-  BEFORE PUBLISHING, replace the placeholder slug "trnchawla/FotoBrowser-pub"
-  everywhere below with your actual GitHub <user>/<repo>, and drop your
-  1024px logo at  assets/icon.png. Screenshots live in  assets/screenshot-*.png
-  (hero + the "Take a look" gallery below).
+  FotoBrowser landing page (static, served by GitHub Pages from FotoBrowser-pub's dev branch).
+  Search and AI-assistant metadata lives in <head>: keep the JSON-LD featureList and FAQ, and
+  llms.txt / llms-full.txt / apple-photos-alternative.html, in step with the features (RELEASE.md §4).
+  Screenshots: the page uses the 1600px JPEGs in assets/; the PNG originals are for the README.
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FotoBrowser — your photos, your folders, your Mac</title>
-<meta name="description" content="A fast, local-first photo browser for Mac. The Apple Photos feel, over your own folders and backup drives — no library lock-in, no cloud." />
-<meta property="og:title" content="FotoBrowser — your photos, your folders, your Mac" />
+<title>FotoBrowser — a free Apple Photos alternative for Mac, over your own folders</title>
+<meta name="description" content="FotoBrowser is a free, local-first Apple Photos alternative for Mac. Browse, organise and edit the photos in your own folders and external drives — no library, no cloud, no subscription. macOS 15+." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href="https://trnchawla.github.io/FotoBrowser-pub/" />
+<meta name="theme-color" content="#0e0b12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#fff7f3" media="(prefers-color-scheme: light)" />
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<link rel="apple-touch-icon" href="assets/icon.png" />
+<link rel="alternate" type="text/plain" title="FotoBrowser summary for AI agents (llms.txt)" href="llms.txt" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="FotoBrowser" />
+<meta property="og:url" content="https://trnchawla.github.io/FotoBrowser-pub/" />
+<meta property="og:title" content="FotoBrowser — a free Apple Photos alternative for Mac, over your own folders" />
 <meta property="og:description" content="The Apple Photos feel, over your own folders and backup drives. No library lock-in, no cloud. Free alpha for macOS 15+." />
+<meta property="og:image" content="https://trnchawla.github.io/FotoBrowser-pub/assets/og-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="FotoBrowser's timeline grid of photos from your own folders, on a Mac" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FotoBrowser — a free Apple Photos alternative for Mac" />
+<meta name="twitter:description" content="The Apple Photos feel, over your own folders and backup drives. No library lock-in, no cloud. Free alpha for macOS 15+." />
+<meta name="twitter:image" content="https://trnchawla.github.io/FotoBrowser-pub/assets/og-card.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://trnchawla.github.io/FotoBrowser-pub/#website",
+      "url": "https://trnchawla.github.io/FotoBrowser-pub/",
+      "name": "FotoBrowser",
+      "description": "A free, local-first Apple Photos alternative for Mac that works with your own folders and drives.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#author"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://trnchawla.github.io/FotoBrowser-pub/#author",
+      "name": "Tarun Chawla",
+      "url": "https://github.com/trnchawla",
+      "sameAs": [
+        "https://github.com/trnchawla",
+        "https://www.youtube.com/@trnchawla"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://trnchawla.github.io/FotoBrowser-pub/#app",
+      "name": "FotoBrowser",
+      "alternateName": "FotoBrowser for Mac",
+      "description": "FotoBrowser is a free, local-first photo browser and organiser for macOS — an Apple Photos alternative that works with the photos in your own folders and on external and backup drives instead of a single photo library. It offers an Apple Photos-style timeline, viewer, albums, favourites, People, Places, Events and yearly Memories, duplicate and similar-photo detection, RAW support and non-destructive editing, all on your Mac with no cloud, account or subscription.",
+      "url": "https://trnchawla.github.io/FotoBrowser-pub/",
+      "applicationCategory": "MultimediaApplication",
+      "applicationSubCategory": "Photo management",
+      "operatingSystem": "macOS 15 Sequoia or later (Apple Silicon and Intel)",
+      "downloadUrl": "https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg",
+      "installUrl": "https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg",
+      "releaseNotes": "https://github.com/trnchawla/FotoBrowser-pub/releases/latest",
+      "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://github.com/trnchawla/FotoBrowser-pub#readme"
+      },
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": "https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg"
+      },
+      "image": "https://trnchawla.github.io/FotoBrowser-pub/assets/icon.png",
+      "screenshot": [
+        "https://trnchawla.github.io/FotoBrowser-pub/assets/screenshot-hero.jpg",
+        "https://trnchawla.github.io/FotoBrowser-pub/assets/screenshot-viewer.jpg",
+        "https://trnchawla.github.io/FotoBrowser-pub/assets/screenshot-cleanup.jpg",
+        "https://trnchawla.github.io/FotoBrowser-pub/assets/screenshot-duplicates.jpg",
+        "https://trnchawla.github.io/FotoBrowser-pub/assets/screenshot-print.jpg",
+        "https://trnchawla.github.io/FotoBrowser-pub/assets/screenshot-video.jpg"
+      ],
+      "keywords": "Apple Photos alternative, Apple Photos replacement, photo manager for Mac, photo organizer for Mac, photo browser, local-first, external drive photos, RAW photo viewer, duplicate photo finder, macOS",
+      "featureList": [
+        "Browse photos in your own folders on internal, external and backup drives — no photo library to import into",
+        "Fast timeline grid with month and year sections, or a flat grid",
+        "Full-screen viewer with zoom, histogram and clipping warnings",
+        "Non-destructive editing: crop, rotate, exposure, contrast, clarity, tone curve, colour, black and white",
+        "Camera RAW (CR3, CR2, NEF, ARW, RAF, DNG and more) and HEIF, with RAW originals never rewritten",
+        "Albums, favourites and filters that stay put",
+        "People: on-device face clustering",
+        "Places from GPS with an offline database and a map in the Inspector",
+        "Set Location by place name and Set Date/Time, written into the files' metadata, with Undo",
+        "Events and trips found automatically, and a yearly Best-of Memory",
+        "Duplicate detection across every folder and drive, Find Similar Photos and Reclaim Space",
+        "Clean Up: review one day or trip at a time",
+        "Drive roles: internal, master and read-only vault drives that are never modified",
+        "Works with disconnected drives: placeholders, and changes applied when the drive is plugged back in",
+        "Import from iPhone over USB, copy-only",
+        "Titles, descriptions and keywords for stock sites, Export for Stock with CSV, and on-device keyword suggestions",
+        "Native printing with photo sizes, tiling, grid and caption layouts",
+        "Share, drag out to other apps, and open photos from Finder",
+        "Runs entirely on your Mac: no cloud, no account, no subscription"
+      ],
+      "author": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#author"
+      },
+      "publisher": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#author"
+      },
+      "sameAs": [
+        "https://github.com/trnchawla/FotoBrowser-pub",
+        "https://youtu.be/p2xv_TNXEvs"
+      ],
+      "subjectOf": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#video"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trnchawla.github.io/FotoBrowser-pub/#webpage",
+      "url": "https://trnchawla.github.io/FotoBrowser-pub/",
+      "name": "FotoBrowser — a free Apple Photos alternative for Mac, over your own folders",
+      "description": "FotoBrowser is a free, local-first Apple Photos alternative for Mac. Browse, organise and edit the photos in your own folders and external drives — no library, no cloud, no subscription. macOS 15+.",
+      "isPartOf": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#website"
+      },
+      "about": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#app"
+      },
+      "primaryImageOfPage": "https://trnchawla.github.io/FotoBrowser-pub/assets/og-card.jpg",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://trnchawla.github.io/FotoBrowser-pub/#video",
+      "name": "The Apple Photos alternative that reads your own folders | FotoBrowser for Mac",
+      "description": "A quick tour of FotoBrowser for Mac: an Apple Photos-style library over your own folders and drives.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/p2xv_TNXEvs/maxresdefault.jpg",
+      "uploadDate": "2026-08-15T02:41:31-07:00",
+      "duration": "PT1M21S",
+      "embedUrl": "https://www.youtube.com/embed/p2xv_TNXEvs",
+      "url": "https://youtu.be/p2xv_TNXEvs",
+      "author": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#author"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://trnchawla.github.io/FotoBrowser-pub/#faq",
+      "isPartOf": {
+        "@id": "https://trnchawla.github.io/FotoBrowser-pub/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is FotoBrowser an alternative to Apple Photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. FotoBrowser gives you an Apple Photos–style timeline and viewer, with albums, favourites, People, Places, Events, yearly Memories and non-destructive editing — over ordinary folders on your own drives instead of one .photoslibrary. See FotoBrowser vs Apple Photos for a side-by-side comparison."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FotoBrowser free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It's free to download, with no subscription, no in-app purchases and no account to create. It's an alpha: usable day to day, with some rough edges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it move or copy my photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You add folders and FotoBrowser reads your photos where they are, on your Mac or on external drives. Files are only moved or deleted when you choose to, and importing from an iPhone copies photos into a folder without deleting them from the phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it change my original files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only when you ask, and only the metadata. Setting a location, date, title or keywords writes them into the photo's file without re-saving the picture. RAW files are never written: those changes go into an .xmp sidecar beside them. Crops, rotations and colour adjustments stay in FotoBrowser's library. Drives you mark as a Vault are never modified."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work with external drives?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Watch folders on as many drives as you like. When a drive is unplugged its photos stay in the grid as placeholders, and open at full size from a copy on a connected drive if there is one. Deletes and location or date changes for that drive are applied when it's plugged back in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it need iCloud or an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Everything runs on your Mac and your photos are never uploaded; there's no iCloud sync. The internet is used to check for updates, send anonymous crash reports and usage statistics, and show the map in the Inspector — and, if you choose, to look up places in Apple Maps or share your email for update news."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Macs does it run on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Macs with macOS 15 Sequoia or later, Apple Silicon and Intel. FotoBrowser is Mac-only: there's no iPhone, iPad or Windows version."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
   :root {
     --bg: #0e0b12; --panel: #17131d; --text: #f3eef7; --muted: #b6acc2;
@@ -40,7 +247,7 @@
     background:linear-gradient(100deg,var(--accent1),var(--accent2)); color:#fff;
     font-weight:700; padding:14px 26px; border-radius:14px; box-shadow:0 10px 30px var(--ring); }
   .sub { display:block; margin-top:12px; color:var(--muted); font-size:14px; }
-  .shot { width:100%; border-radius:16px; margin:36px 0; border:1px solid rgba(128,128,128,.18); }
+  .shot { width:100%; height:auto; border-radius:16px; margin:36px 0; border:1px solid rgba(128,128,128,.18); }
   .video { position:relative; width:100%; padding-top:56.25%; margin:36px 0; border-radius:16px;
     overflow:hidden; border:1px solid rgba(128,128,128,.18); }
   .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
@@ -65,16 +272,17 @@
 <body>
 <div class="wrap">
 
-  <div class="hero">
-    <img class="icon" src="assets/icon.png" alt="FotoBrowser icon" />
+  <header class="hero">
+    <img class="icon" src="assets/icon.png" alt="FotoBrowser icon" width="128" height="128" />
     <h1>Your photos, your folders,<br/><span class="grad">your Mac.</span></h1>
     <p class="tag">A fast, local-first photo browser for macOS. The Apple&nbsp;Photos feel — over your own folders and backup drives. No library lock-in, no cloud.</p>
     <a class="cta" href="https://github.com/trnchawla/FotoBrowser-pub/releases/latest/download/FotoBrowser.dmg">⬇︎ Download for Mac</a>
     <span class="sub">Free · <span class="pill">ALPHA</span> · macOS 15+ · Apple&nbsp;Silicon &amp; Intel</span>
-  </div>
+  </header>
 
+  <main>
   <!-- Hero screenshot -->
-  <img class="shot" src="assets/screenshot-hero.png" alt="FotoBrowser — every photo, beautifully in one place" />
+  <img class="shot" src="assets/screenshot-hero.jpg" width="1600" height="960" fetchpriority="high" alt="FotoBrowser — every photo, beautifully in one place: a timeline grid over your own folders, with albums and drives in the sidebar" />
 
   <section>
     <h2>See it in action</h2>
@@ -136,11 +344,11 @@
 
   <section>
     <h2>Take a look</h2>
-    <img class="shot" src="assets/screenshot-viewer.png" alt="A clean, full-screen photo experience" />
-    <img class="shot" src="assets/screenshot-cleanup.png" alt="Clean up your library, one photo at a time" />
-    <img class="shot" src="assets/screenshot-duplicates.png" alt="Find duplicates and reclaim your space" />
-    <img class="shot" src="assets/screenshot-print.png" alt="Print passport photos — right at home" />
-    <img class="shot" src="assets/screenshot-video.png" alt="Photos and videos, together" />
+    <img class="shot" src="assets/screenshot-viewer.jpg" width="1600" height="960" loading="lazy" decoding="async" alt="A clean, full-screen photo experience in FotoBrowser's photo viewer" />
+    <img class="shot" src="assets/screenshot-cleanup.jpg" width="1600" height="960" loading="lazy" decoding="async" alt="Clean up your library, one photo at a time, with FotoBrowser's Clean Up review" />
+    <img class="shot" src="assets/screenshot-duplicates.jpg" width="1600" height="960" loading="lazy" decoding="async" alt="Find duplicates across folders and drives and reclaim your space" />
+    <img class="shot" src="assets/screenshot-print.jpg" width="1600" height="960" loading="lazy" decoding="async" alt="Print passport photos — right at home, with FotoBrowser's photo-size printing" />
+    <img class="shot" src="assets/screenshot-video.jpg" width="1600" height="960" loading="lazy" decoding="async" alt="Photos and videos, together in one FotoBrowser timeline" />
   </section>
 
   <section>
@@ -153,12 +361,26 @@
     <p class="meta">Requires macOS 15 (Sequoia) or later. Universal build (Apple Silicon &amp; Intel).</p>
   </section>
 
+  <section id="faq">
+    <h2>Questions</h2>
+    <div class="grid">
+      <div class="card"><h3>Is FotoBrowser an alternative to Apple Photos?</h3><p>Yes. FotoBrowser gives you an Apple Photos–style timeline and viewer, with albums, favourites, People, Places, Events, yearly Memories and non-destructive editing — over ordinary folders on your own drives instead of one <code>.photoslibrary</code>. See <a href="apple-photos-alternative.html">FotoBrowser vs Apple Photos</a> for a side-by-side comparison.</p></div>
+      <div class="card"><h3>Is FotoBrowser free?</h3><p>Yes. It's free to download, with no subscription, no in-app purchases and no account to create. It's an alpha: usable day to day, with some rough edges.</p></div>
+      <div class="card"><h3>Does it move or copy my photos?</h3><p>No. You add folders and FotoBrowser reads your photos where they are, on your Mac or on external drives. Files are only moved or deleted when you choose to, and importing from an iPhone copies photos into a folder without deleting them from the phone.</p></div>
+      <div class="card"><h3>Does it change my original files?</h3><p>Only when you ask, and only the metadata. Setting a location, date, title or keywords writes them into the photo's file without re-saving the picture. RAW files are never written: those changes go into an <code>.xmp</code> sidecar beside them. Crops, rotations and colour adjustments stay in FotoBrowser's library. Drives you mark as a Vault are never modified.</p></div>
+      <div class="card"><h3>Does it work with external drives?</h3><p>Yes. Watch folders on as many drives as you like. When a drive is unplugged its photos stay in the grid as placeholders, and open at full size from a copy on a connected drive if there is one. Deletes and location or date changes for that drive are applied when it's plugged back in.</p></div>
+      <div class="card"><h3>Does it need iCloud or an internet connection?</h3><p>No. Everything runs on your Mac and your photos are never uploaded; there's no iCloud sync. The internet is used to check for updates, send anonymous crash reports and usage statistics, and show the map in the Inspector — and, if you choose, to look up places in Apple Maps or share your email for update news.</p></div>
+      <div class="card"><h3>Which Macs does it run on?</h3><p>Macs with macOS 15 Sequoia or later, Apple Silicon and Intel. FotoBrowser is Mac-only: there's no iPhone, iPad or Windows version.</p></div>
+    </div>
+  </section>
+
   <section>
     <h2>Feedback</h2>
     <p class="meta">This is an early alpha and your reports steer it. Please <a href="https://github.com/trnchawla/FotoBrowser-pub/issues">open an issue</a> with what you tried, what you expected, and what happened.</p>
   </section>
+  </main>
 
 </div>
-<footer>FotoBrowser · a local-first Mac photo browser · made by Tarun Chawla</footer>
+<footer>FotoBrowser · a local-first Mac photo browser · made by Tarun Chawla<br /><a href="apple-photos-alternative.html">FotoBrowser vs Apple Photos</a></footer>
 </body>
 </html>
